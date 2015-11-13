@@ -1,19 +1,19 @@
-tutum-docker-lamp
+A pre-configured LAMP container
 =================
 
-A bare build LAMP image (APACHE + PHP + MYSQL)
+A bare build LAMP image (APACHE2.4 + PHP5.5 + MYSQL5.5)
 
 
 Usage
 -----
 
-To create the image `tutum/lamp`, execute the following command on the tutum-docker-lamp folder:
+To create the image `vect0r/lamp`, execute the following command:
 
 	docker build -t vect0r/lamp .
 
 push to registry/docker hub:
 
-	docker push tutum/lamp
+	docker push vect0r/lamp
 
 
 Running image
@@ -86,7 +86,7 @@ Setting a specific password for the MySQL server admin account
 If you want to use a preset password instead of a random generated one, you can
 set the environment variable `MYSQL_PASS` to your specific password when running the container:
 
-	docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="mypass" tutum/lamp
+	docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="mypass" vect0r/lamp
 
 You can now test your new admin password:
 
